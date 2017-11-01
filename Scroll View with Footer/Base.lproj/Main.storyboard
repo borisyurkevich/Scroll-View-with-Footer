@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="4ew-RH-QZc">
             <objects>
-                <viewController id="jBa-O1-UU5" customClass="ViewController" customModule="Sticky_Button" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jBa-O1-UU5" customClass="ViewController" customModule="Scroll_View_with_Footer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i0N-Bp-2yV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,6 +26,9 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Container" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3j9-qK-vIj">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.5" id="Pcg-nx-bbP"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -82,7 +85,9 @@
                         <viewLayoutGuide key="safeArea" id="39e-da-N1V"/>
                     </view>
                     <connections>
+                        <outlet property="footerView" destination="1o1-V7-MnE" id="1xm-MM-3eQ"/>
                         <outlet property="label" destination="3j9-qK-vIj" id="OiS-ip-YiO"/>
+                        <outlet property="labelHeightConstraint" destination="Pcg-nx-bbP" id="ASV-D3-wyz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ad-is-AA9" sceneMemberID="firstResponder"/>

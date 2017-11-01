@@ -18,7 +18,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         label.text = "Content"
-        labelHeightConstraint.constant = view.bounds.height - footerView.bounds.height
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        labelHeightConstraint.constant = (view.frame.height - view.safeAreaInsets.top) - footerView.bounds.height
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
